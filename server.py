@@ -35,4 +35,4 @@ def countryByNamePage(n):
 		'country.html',
 		c = c)
 
-app.run(host='0.0.0.0', port=5036, debug=True)
+app.run(host='0.0.0.0', port=5638, debug=True)
