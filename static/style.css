@@ -25,12 +25,8 @@ img.big {
 a{
 	text-decoration: none;
 }
-.nav_button{
-	border: solid thin black;
-	padding: 1ex;
-	margin: 1ex;
-	border-radius: 0.5ex;
-	text-align: center;
-	display: inline-block;
 
-}
+.nav_button{
+    border:solid gray thin;
+    bottom: auto;
+    }
