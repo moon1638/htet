@@ -4,8 +4,11 @@
 	<link rel='stylesheet' href='/static/style.css'>
 </head>
 	<body>
-		<h1>{{c['name']}}</h1>
 		<div class='properties'>
+		<img src="/static/flags/{{c['tld']}}.gif" class='big'>
+		
+		<h1>{{c['name']}}</h1>
+		
 			<div>
 				<div>Capital</div>
 				<div>{{c['capital']}}</div>
@@ -22,11 +25,19 @@
 				<div>GDP (million $)</div>
 				<div>{{ "{:,.0f}".format(c['gdp']/1000000) }}</div>
 			</div>
+			<div>
+			<div>Area</div>
+			<div>{{c['area']}}</div>
 		</div>
-		<img src="/static/flags/{{c['tld']}}.gif" class='big'>
-		<div class='edit-button'>
-		<a href='/editcountryByName/{{c.name}}'>Edit</a>
+		<div>
+			<div>Tld</div>
+			<div>{{c['tld']}}</div>
 		</div>
-		<div> <a href='/delete/{{c.name}}'> Delete </a> </div>
+		
+		<a href="/createcountry" class="create">Create</a>
+		<a href='/editCountryByName/{{c.name}}' class="edit">Edit</a>
+		<a href='/delete/{{c.name}}' class="delete"> Delete </a>
+		
+	</div>
 	</body>
 </html>
