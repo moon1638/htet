@@ -1,8 +1,21 @@
 body{
 	font-family:arial;
     font-size: 25px;
-    background-image: url('wallpaper.jpg');
+    background-image: url('w1.jpg');
 
+}
+ul#sort a:link{
+    background-color: #d02fca;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    list-style-type: none;
+}
+url#sort a:hover{
+    background-color: #ddd;
+    color: green;
 }
 img.tiny{
     width: 20px;
@@ -51,7 +64,6 @@ a {
     display: inline-block;
     padding: 8px 16px;
 }
-
 a:hover {
     background-color: #ddd;
     color: green;
@@ -74,16 +86,16 @@ a:hover {
     color: black;
 }
 .create{
-    background-color:#ed390f;
+    background-color:#db4372;
     color: black;
 
 }
 .edit{
-    background-color:#ed390f;
+    background-color:#db4372;
     color: black;
 }
 .delete{
-    background-color:#ed390f;
+    background-color:#db4372;
     color: black;
 
 }

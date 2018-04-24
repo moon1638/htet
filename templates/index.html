@@ -1,18 +1,5 @@
-<!doctype html>
-<html>
-<head>
-	<link rel='stylesheet' href='/static/style.css'>
-</head>
-	<body>
-		<div class="background">
-		<h1>World Factbook</h1>
-		<div>
-			{% for s in Lota %}
-			<a href="/startWithAlphabetic/{{s}}">{{s}}</a>
-			{% endfor %}
-		</div>
-		<div class="color">There are {{w|length}} countries in the world.</div>
-		
+{% extends "base.html" %}
+{% block content %}
 		<ul>
 			{% for c in w %}
 			<li><a href='/countryByName/{{c.name}}'>
@@ -22,6 +9,4 @@
 		</ul>
 			<a href='/begin/{{page_number-page_size}}' class="previous">Previous Page</a>
 			<a href='/begin/{{page_number+page_size}}' class="next">Next Page</a>
-		</div>
-	</body>
-</html>
+{% endblock %}
