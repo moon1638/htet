@@ -3,10 +3,14 @@ import json
 
 page_number =10
 w = json.load(open("worldl.json"))
+lota=sorted(list(set([c['name'][0] for c in w])))
+print(lota)
 for c in w:
     c['tld'] = c['tld'][1:]
-page_size = 20
-
+page_size = 15
+l=[]
+for i in range(ord('A'),ord('Z')+1):
+    l.append(chr(i))
 app = Flask(__name__)
 
 
@@ -14,7 +18,7 @@ app = Flask(__name__)
 def mainPage():
     l = len(w)
     return render_template('index.html',
-                           w=w[0:page_size],page_number=0,page_size=page_size,l=l)
+                           w=w[0:page_size],page_number=0,page_size=page_size,l=l,Lota=lota)
 
 
 @app.route('/begin/<b>')
@@ -113,6 +117,15 @@ def deleteCountry(n):
         w=w[0:page_size])
 
     
-
+@app.route('/startWithAlphabetic/<a>')
+def startWithAlphabetic(a):
+    cl = [c for c in w if c['name'][0] == a]
+    return render_template(
+        'continent.html',
+        length_of_cl=len(cl),
+        cl=cl,
+        a=a,
+        Lota=lota
+    )
 app.run(host='0.0.0.0', port=5638, debug=True)
 
