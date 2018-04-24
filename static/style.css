@@ -12,17 +12,19 @@ img.tiny{
     position: absolute;
     padding: 20px;
     left: 30ex;
+    font-weight: 20px;
+    color: #ed390f;
 
 }
 .properties
 {
-    border-radius: 5px;
+    
     position: absolute;
-    background-color: #f2f2f2;
+    
     padding: 20px;
     left: 50ex;
     width: 600px;
-    border-style: hidden;
+   
 }
 img.big {
     width: 300px;
@@ -55,7 +57,11 @@ a:hover {
     color: green;
 }
 .color{
-    color: orange;
+    color:#fc080e;
+    font-weight: 10px;
+}
+.color1{
+    color:#fc080e;
     font-weight: 10px;
 }
 .previous {
@@ -68,16 +74,16 @@ a:hover {
     color: black;
 }
 .create{
-    background-color:#f1f1f1;
+    background-color:#ed390f;
     color: black;
 
 }
 .edit{
-    background-color:#f2f2f2;
+    background-color:#ed390f;
     color: black;
 }
 .delete{
-    background-color:#f1f1f1;
+    background-color:#ed390f;
     color: black;
 
 }
